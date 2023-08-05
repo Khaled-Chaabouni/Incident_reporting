@@ -6,7 +6,7 @@ echo $_SESSION['username'];
 echo "______";
 echo $_SESSION['email'];
 echo "______";
-echo md5($_SESSION['password'],raw);
+echo $_SESSION['password'];
 echo "______";
 echo $_SESSION['lgdin'];
 ?>
