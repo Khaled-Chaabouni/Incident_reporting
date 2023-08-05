@@ -62,26 +62,26 @@ body>main{
 }
 main>form{
     margin:1rem auto;
-    border:solid 1px var(--border-color)
+    border:solid 1px var(--border-color);
     padding:1rem;
     border-radius:var(--border-radius);
-    background-color:var(--form-bg-color)
+    background-color:var(--form-bg-color);
 }
 body>header>nav>a{display:flex;
-    justify-content:center;
-    align-items:center
+    justify-content:right;
+    align-items:right
 }
 nav{display:flex;
     flex-direction:column;
-    justify-content:center;
-    align-items:center
+    justify-content:right;
+    align-items:right
 }
 
 @media (min-width:769px){
     nav{display:flex;
         flex-direction:row;
-        justify-content:space-between;
-        align-items:center
+        justify-content:right;
+        align-items:right
     }
 }
 nav ul{
@@ -91,7 +91,7 @@ nav ul{
 nav ul li{display:inline-block;
     margin:0 .5rem;
     position:relative;
-    text-align:left
+    text-align:right
 }
 nav li a{
     text-decoration:none;
@@ -148,7 +148,7 @@ form p{
 }
 form>section{display:flex;
     flex-direction:row;
-    justify-content:space-between;
+    justify-content:right;
     align-items:center;
     margin-bottom:1rem
 }
@@ -319,3 +319,57 @@ td:last-child,th:last-child{
     align-items:center;
     justify-content:center
 }
+
+/*-----------------------------------*/
+
+nav {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+  nav a:hover {
+    background-color: #f6f6f6;
+  }
+
+  /*-----------------------------------*/
+
+  
+
+  /*-----------------------------------*/
+
+  #core{
+    text-align: center;
+    align-items: stretch;
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    min-height: 100vh; /* Ensures the content takes up the full viewport height */
+    padding-top: 5em;
+
+    background-image: url('http://localhost/adactim/view/images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    min-height: 100vh; /*Ensure the main element takes up the full viewport height*/
+  }
+
+
+
+

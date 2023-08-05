@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="../view/stylesheets/style.css?v=<?php echo time(); ?>">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://www.phptutorial.net/app/css/style.css">
+        <link rel="stylesheet" href="../view/stylesheets/style.css?v=<?php echo time(); ?>">
     </head>
     <body class="Landing">
         <?php
@@ -21,7 +21,7 @@
                     <input type="text" id="type" name="type"><br>
 
                     <label for="content">Provide details :</label><br>
-                    <input type="text" id="content" name="content"><br>
+                    <textarea id="content" name="content" rows="4" cols="50" style="resize: none;"></textarea><br>
                     
                     <label for="impact">Rate the incident :</label><br>
                     <input list="impacts" name="impact" id="impact">
@@ -34,8 +34,7 @@
                     <label for="measures">Measures to be taken :</label><br>
                     <input type="text" id="measures" name="measures"><br><br>
 
-                    <button type="submit">Submit</button>
-
+                    <button type="submit" type="submit" name="submit" value="submit">Generate Report</button>
                 </form>
             </main>
         </div>
