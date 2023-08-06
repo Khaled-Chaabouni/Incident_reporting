@@ -12,9 +12,9 @@
                     <?php
                     session_start();
                     ?>
+                    <h4><?php echo $_SESSION['userid']; ?></h4>
                     <h2><?php echo $_SESSION['username']; ?><br></h2>
                     <h4><?php echo $_SESSION['email']; ?></h4>
-                    <h4><?php echo $_SESSION['password']; ?></h4>
                 </div>
             </div>
        

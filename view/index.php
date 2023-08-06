@@ -13,12 +13,40 @@
                 if (isset($_SESSION['lgdin'])) {
                     if ($_SESSION['lgdin']){
             ?>
-                        <ul>
-                            <!-- <li><a href="dashboard.php">Dashboard</a></li> -->
-                            <li><a href="profile.php">Profile</a></li>
-                            <!-- <li><a href="settings.php">Settings</a></li> -->
-                            <li><a href="../controller/logout_redirect.php">Logout</a></li>
-                        </ul>
+                        <?php
+                        if (isset($_SESSION['acctype'])) {
+                            if ($_SESSION['acctype']=="admin"){
+                        ?>
+                                <ul>
+                                    <!-- <li><a href="dashboard.php">Dashboard</a></li> -->
+                                    <li><a href="adminpanel.php">Profiles</a></li>
+                                    <li><a href="../controller/logout_redirect.php">Logout</a></li>
+                                </ul>
+                        <?php
+                            }else{
+                        ?>
+                                <ul>
+                                    <!-- <li><a href="dashboard.php">Dashboard</a></li> -->
+                                    <li><a href="profile.php">Profile</a></li>
+                                    <!-- <li><a href="settings.php">Settings</a></li> -->
+                                    <li><a href="../controller/logout_redirect.php">Logout</a></li>
+                                </ul>
+                        <?php 
+                            }
+                        ?>
+                        
+                        <?php
+                        }else{
+                        ?>
+                            <ul>
+                                <!-- <li><a href="dashboard.php">Dashboard</a></li> -->
+                                <li><a href="profile.php">Profile</a></li>
+                                <!-- <li><a href="settings.php">Settings</a></li> -->
+                                <li><a href="../controller/logout_redirect.php">Logout</a></li>
+                            </ul>
+                        <?php
+                        }
+                        ?>
             <?php
                     }else{
             ?>

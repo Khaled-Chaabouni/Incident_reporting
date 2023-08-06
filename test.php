@@ -9,4 +9,6 @@ echo "______";
 echo $_SESSION['password'];
 echo "______";
 echo $_SESSION['lgdin'];
+echo "______";
+echo $_SESSION['acctype'];
 ?>

@@ -5,11 +5,11 @@
     //--------------------------------------------------------
     session_start();
     $_SESSION['userid']=md5(rand());
-    $_SESSION['username']=md5($_POST['username']);
-    $_SESSION['email']=md5($_POST['email']);
+    $_SESSION['username']=$_POST['username'];
+    $_SESSION['email']=$_POST['email'];
     $_SESSION['password']=md5($_POST['password']);
 
-    $_SESSION['admin']=0;
+    $_SESSION['acctype']="simple_user";
     //--------------------------------------------------------
     $_SESSION['lgdin'] = false;
     if($conn->connect_error){

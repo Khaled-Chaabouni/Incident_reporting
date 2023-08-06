@@ -6,6 +6,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../view/stylesheets/style.css?v=<?php echo time(); ?>">
+        <script>
+            document.getElementById("reportform").addEventListener("submit", function(event) {
+                // Prevent the default form submission behavior
+                event.preventDefault();
+                alert("fuck");
+                // Handle the form submission here (optional)
+
+                // Redirect to the specified location
+                window.location.href = "http://localhost/adactim/view/index.php";
+            });
+        </script>
     </head>
     <body class="Landing">
         <?php
@@ -14,7 +25,7 @@
         
         <div class="Home">
             <main>
-                <form action="../controller/submit_report.php" method="POST">
+                <form action="../controller/submit_report.php" method="POST" id="reportform">
                     <h1>Report card</h1>
 
                     <label for="type">Type of threat :</label><br>
@@ -36,6 +47,7 @@
 
                     <button type="submit" type="submit" name="submit" value="submit">Generate Report</button>
                 </form>
+                
             </main>
         </div>
     </body>

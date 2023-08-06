@@ -12,7 +12,6 @@
     
     $_SESSION['date'] = date('Y-m-d');
 
-    $test_num=404;
 
     //--------------------------------------------------------
     
@@ -33,7 +32,7 @@
     
     
     $stmt=$conn->prepare("insert into reports(sender,date,type,content,impact,measures) values(?,?,?,?,?,?)");
-    $stmt->bind_param('isssss',$test_num,$_SESSION['date'],$_SESSION['type'],$_SESSION['content'],$_SESSION['impact'],$_SESSION['measures']);
+    $stmt->bind_param('ssssss',$_SESSION[userid],$_SESSION['date'],$_SESSION['type'],$_SESSION['content'],$_SESSION['impact'],$_SESSION['measures']);
     $stmt->execute();
     $stmt->close();
     
