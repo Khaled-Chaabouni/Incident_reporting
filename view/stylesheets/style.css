@@ -355,20 +355,22 @@ nav {
 
   /*-----------------------------------*/
 
-  #core{
+  /* #core{
     text-align: center;
     align-items: stretch;
     display: flex;
-    justify-content: center; /* Centers the content horizontally */
-    min-height: 100vh; /* Ensures the content takes up the full viewport height */
+    justify-content: center;  
+    min-height: 100vh;  
     padding-top: 5em;
 
     background-image: url('http://localhost/adactim/view/images/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    min-height: 100vh; /*Ensure the main element takes up the full viewport height*/
-  }
+    min-height: 100vh; 
+  } 
+  
+  */
 
 
 

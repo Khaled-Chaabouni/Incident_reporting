@@ -29,13 +29,13 @@
                     <h1>Report card</h1>
 
                     <label for="type">Type of threat :</label><br>
-                    <input type="text" id="type" name="type"><br>
+                    <input type="text" id="type" name="type" required><br>
 
                     <label for="content">Provide details :</label><br>
-                    <textarea id="content" name="content" rows="4" cols="50" style="resize: none;"></textarea><br>
+                    <textarea id="content" name="content" rows="4" cols="50" style="resize: none;" required></textarea><br>
                     
                     <label for="impact">Rate the incident :</label><br>
-                    <input list="impacts" name="impact" id="impact">
+                    <input list="impacts" name="impact" id="impact" required>
                         <datalist id="impacts">
                             <option value="light">
                             <option value="moderate">
@@ -43,7 +43,7 @@
                         </datalist><br>
                     
                     <label for="measures">Measures to be taken :</label><br>
-                    <input type="text" id="measures" name="measures"><br><br>
+                    <input type="text" id="measures" name="measures" required><br><br>
 
                     <button type="submit" type="submit" name="submit" value="submit">Generate Report</button>
                 </form>

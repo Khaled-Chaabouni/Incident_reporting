@@ -18,7 +18,7 @@
                 <label for="password">Password:</label>
                 <input type="password" name="password" id="password">
             </div>
-            <button type="submit">Register</button>
+            <button type="submit">Login</button>
             <footer>Create an account? <a href="signup.php">Register here</a></footer>
         </form>
     </main>
