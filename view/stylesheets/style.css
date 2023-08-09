@@ -1,3 +1,8 @@
+
+
+
+
+
 :root{
     --primary:#7952b3;
     --secondary:#61428f;
@@ -149,7 +154,7 @@ form p{
 form>section{display:flex;
     flex-direction:row;
     justify-content:right;
-    align-items:center;
+    align-items:left;
     margin-bottom:1rem
 }
 form>footer{
@@ -355,23 +360,22 @@ nav {
 
   /*-----------------------------------*/
 
-  /* #core{
-    text-align: center;
+  body{
+    text-align: left;
     align-items: stretch;
     display: flex;
     justify-content: center;  
-    min-height: 100vh;  
+    min-height: 80vh;  
     padding-top: 5em;
 
-    background-image: url('http://localhost/adactim/view/images/background.jpg');
+    background-image: url('https://images.unsplash.com/photo-1526488807855-309186804587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    min-height: 100vh; 
+     
   } 
   
-  */
-
+  
 
 
 
