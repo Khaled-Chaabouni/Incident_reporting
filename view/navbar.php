@@ -76,12 +76,12 @@
                         <?php
                     }else{
                         ?>
-                        <li class="nav-item"><a href="../view/signin.php" class="nav-link">Sign up</a></li>
+                        <li class="nav-item"><a href="../view/signup.php" class="nav-link">Sign up</a></li>
                         <?php
                     }
                 }else{
                     ?>
-                    <li class="nav-item"><a href="../view/signin.php" class="nav-link">Sign up</a></li>
+                    <li class="nav-item"><a href="../view/signup.php" class="nav-link">Sign up</a></li>
                     <?php
                 }
                 ?>

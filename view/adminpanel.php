@@ -38,55 +38,78 @@
 </head>
 <body>
     <?php
-        include_once 'navbar.php';
-    ?>
-    <h1 class="text-center mt-5">User List</h1>
-    <div class="user-list container">
-        <?php
-        // Database connection settings
-        require_once '../model/dbcon.php';
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-
-        // Fetch users from the 'users' table
-        $sql = "SELECT user_id, username, email FROM users";
+    include_once 'navbar.php';
+    require_once '../model/dbcon.php';
+    
+    // Check if the user is logged in
+    if (isset($_SESSION['lgdin']) && $_SESSION['lgdin']) {
+        // Get the user's account type from the database
+        $userId = $_SESSION['userid'];
+        $sql = "SELECT account_type FROM users WHERE user_id = '$userId'";
         $result = $conn->query($sql);
 
-        // Check if there are any users
-        if ($result->num_rows > 0) {
-            // Loop through each user and display their information in a div
-            while ($row = $result->fetch_assoc()) {
-                ?>
-                <div class="user-div">
-                    <p><strong>User ID:</strong><br> <?php echo $row['user_id']; ?></p>
-                    <p><strong>Username:</strong><br> <?php echo $row['username']; ?></p>
-                    <p><strong>Email:</strong><br><?php echo $row['email']; ?><br><br></p>
-                    
-                    <!-- Form for updating user -->
-                    <div class="btn-container">
-                        <form action="update.php" method="post">
-                            <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
-                            <input type="submit" class="btn btn-primary" value="Update">
-                        </form>
-                    
-                        <!-- Form for deleting user -->
-                        <form action="../controller/delete_user.php" method="post">
-                            <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
-                            <input type="submit" class="btn btn-danger" value="Delete">
-                        </form>
-                    </div>
+        if ($result->num_rows === 1) {
+            $row = $result->fetch_assoc();
+            $accountType = $row['account_type'];
+            
+            if ($accountType === 'admin') {
+            ?>
+                <h1 class="text-center mt-5">User List</h1>
+                <div class="user-list container">
+                    <?php
+                    // Database connection settings
+                    // Check connection
+                    if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                    }
+
+                    // Fetch users from the 'users' table
+                    $sql = "SELECT user_id, username, email FROM users";
+                    $result = $conn->query($sql);
+
+                    // Check if there are any users
+                    if ($result->num_rows > 0) {
+                        // Loop through each user and display their information in a div
+                        while ($row = $result->fetch_assoc()) {
+                            ?>
+                            <div class="user-div">
+                                <p><strong>User ID:</strong><br> <?php echo $row['user_id']; ?></p>
+                                <p><strong>Username:</strong><br> <?php echo $row['username']; ?></p>
+                                <p><strong>Email:</strong><br><?php echo $row['email']; ?><br><br></p>
+                                
+                                <!-- Form for updating user -->
+                                <div class="btn-container">
+                                    <form action="update.php" method="post">
+                                        <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
+                                        <input type="submit" class="btn btn-primary" value="Update">
+                                    </form>
+                                
+                                    <!-- Form for deleting user -->
+                                    <form action="../controller/delete_user.php" method="post">
+                                        <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
+                                        <input type="submit" class="btn btn-danger" value="Delete">
+                                    </form>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                    } else {
+                        echo "<p class='text-center mt-4'>No users found.</p>";
+                    }
+
+                    // Close the database connection
+                    $conn->close();
+                    ?>
                 </div>
+            <?php 
+            }
+            else{
+                ?>
+                <h1 class="text-center mt-5">Unautherized Access!</h1>
                 <?php
             }
-        } else {
-            echo "<p class='text-center mt-4'>No users found.</p>";
         }
-
-        // Close the database connection
-        $conn->close();
-        ?>
-    </div>
+    }
+    ?>
 </body>
 </html>
