@@ -56,7 +56,7 @@
     
     
     $stmt=$conn->prepare("insert into reports(sender,date,type,content,impact,measures) values(?,?,?,?,?,?)");
-    $stmt->bind_param('ssssss',$_SESSION[userid],$_SESSION['date'],$_SESSION['type'],$_SESSION['content'],$_SESSION['impact'],$_SESSION['measures']);
+    $stmt->bind_param('ssssss',$_SESSION['userid'],$_SESSION['date'],$_SESSION['type'],$_SESSION['content'],$_SESSION['impact'],$_SESSION['measures']);
     $stmt->execute();
     $stmt->close();
     
