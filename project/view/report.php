@@ -14,7 +14,7 @@
                 // Handle the form submission here (optional)
 
                 // Redirect to the specified location
-                window.location.href = "http://localhost/adactim/view/index.php";
+                window.location.href = "../view/index.php";
             });
 
 

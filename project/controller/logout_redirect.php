@@ -2,6 +2,6 @@
 
 session_start();
 session_destroy();
-header('Location: http://localhost/adactim/view/index.php');
+header('Location: ../view/index.php');
 
 ?>

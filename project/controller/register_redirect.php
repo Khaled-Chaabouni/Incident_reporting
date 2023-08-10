@@ -19,7 +19,7 @@
         $stmt=$conn->prepare("insert into users(user_id,username,email,password) values(?,?,?,?)");
         $stmt->bind_param('ssss',$_SESSION['userid'],$_SESSION['username'],$_SESSION['email'],$_SESSION['password']);
         $stmt->execute();
-        header('Location: http://localhost/adactim/view/index.php');
+        header('Location: ../view/index.php');
         $stmt->close();
         $_SESSION['lgdin'] = true;
         /* $conn->close(); */

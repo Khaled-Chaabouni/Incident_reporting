@@ -2,7 +2,7 @@
     require_once '../model/dbcon.php';
 
     session_start();
-    header('Refresh: 1;Location: http://localhost/adactim/view/index.php');
+    header('Refresh: 1;Location: ../view/index.php');
 
     // Get form inputs
     $_SESSION['type']=$_POST['type'];

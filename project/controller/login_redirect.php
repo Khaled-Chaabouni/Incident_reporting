@@ -23,7 +23,7 @@
         //Verifying Credentials :
         if($count==1){
             $_SESSION['lgdin'] = true;
-            header('Location: http://localhost/adactim/view/index.php');
+            header('Location: ../view/index.php');
             echo "<script type='text/javascript'>alert('Login Credentials verified')</script>";
         }else{
             $_SESSION['lgdin'] = false;
