@@ -31,7 +31,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql .= " WHERE user_id = '$userId'";
 
         if ($conn->query($sql) === TRUE) {
-            header("Location: ../view/adminpanel.php"); // Redirect back to admin panel on success
+            if($_SESSION['acc_type']=='admin')
+                header("Location: ../view/adminpanel.php"); // Redirect back to admin panel on success
+            else
+                header("Location: ../view/index.php");
             exit;
         } else {
             echo "Error updating user: " . $conn->error;

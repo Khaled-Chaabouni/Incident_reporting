@@ -51,6 +51,7 @@
         if ($result->num_rows === 1) {
             $row = $result->fetch_assoc();
             $accountType = $row['account_type'];
+            $_SESSION['acc_type']=$accountType;
             
             if ($accountType === 'admin') {
             ?>
