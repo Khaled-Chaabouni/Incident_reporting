@@ -31,7 +31,7 @@ During my summer internship at Wevioo, I developed this web platform using PHP, 
 2. Sign-Up Page
    ![Sign-Up Page](https://github.com/Khaled-Chaabouni/Incident_reporting/blob/main/images/Sign-up.png)
 
-3. Filled Report Card (Form)
+3. Filled Report Card
    ![Filled Report Card](https://github.com/Khaled-Chaabouni/Incident_reporting/blob/main/images/Report_ex.png)
 
 4. Output PDF File
