@@ -25,19 +25,19 @@ During my summer internship at Wevioo, I developed this web platform using PHP, 
 
 ## Screenshots
 
-1. Sign-In Page
+1. Sign-In Page<br>
    ![Sign-In Page](https://github.com/Khaled-Chaabouni/Incident_reporting/blob/main/images/Sign-in.png)
 
-2. Sign-Up Page
+2. Sign-Up Page<br>
    ![Sign-Up Page](https://github.com/Khaled-Chaabouni/Incident_reporting/blob/main/images/Sign-up.png)
 
-3. Filled Report Card
+3. Filled Report Card<br>
    ![Filled Report Card](https://github.com/Khaled-Chaabouni/Incident_reporting/blob/main/images/Report_ex.png)
 
-4. Output PDF File
+4. Output PDF File<br>
    ![Output PDF](https://github.com/Khaled-Chaabouni/Incident_reporting/blob/main/images/Reported_pdf.png)
 
-5. Admin Panel
+5. Admin Panel<br>
    ![Admin Panel](https://github.com/Khaled-Chaabouni/Incident_reporting/blob/main/images/Admin-panel.png)
 
 ## Getting Started
